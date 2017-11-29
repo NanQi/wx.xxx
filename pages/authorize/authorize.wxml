@@ -1,0 +1,25 @@
+<view class="page">
+  <view class="page_top">
+    <view class="desc">获取授权失败， 请你点击
+      <text class="bold">“重新授权”</text>
+    </view>
+
+    <block wx:if="{{id == 1}}">
+      <image class="error_img" src="./imgs/userInfo.png" style="width: 100%"></image>
+    </block>
+    <block wx:if="{{id == 2}}">
+      <image class="error_img" src="./imgs/writePhotosAlbum.png" style="width: 100%"></image>
+    </block>
+    <block wx:if="{{id == 3}}">
+      <image class="error_img" src="./imgs/userLocation.png" style="width: 100%"></image>
+    </block>
+    <block wx:if="{{id == 4}}">
+      <image class="error_img" src="./imgs/record.png" style="width: 100%"></image>
+    </block>
+    <block wx:if="{{id == 5}}">
+      <image class="error_img" src="./imgs/werun.png" style="width: 100%"></image>
+    </block>
+
+  </view>
+  <view class="btn" hover-class="btn-hover" hover-start-time="0" hover-stay-time="50" bindtap="set">重新授权</view>
+</view>

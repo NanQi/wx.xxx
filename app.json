@@ -1,0 +1,15 @@
+{
+    "pages": [
+        "pages/index/index"
+    ],
+    "window": {
+        "navigationBarTitleText": "wx.xxx微信小程序框架"
+    },
+    "networkTimeout": {
+        "request": 30000,
+        "connectSocket": 10000,
+        "uploadFile": 90000,
+        "downloadFile": 90000
+    },
+    "debug": false
+}

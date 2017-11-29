@@ -1,0 +1,33 @@
+.page_top {
+    background-color: #fff;
+    text-align: center;
+    padding: 120rpx 0 60rpx 0;
+}
+.desc {
+    font-size: 28rpx;
+    color: #000;
+}
+.bold {
+    font-weight: bold;
+    font-size: 32rpx;
+}
+.error_img {
+    margin-top: 104rpx;
+    width: 459rpx !important;
+    height: 369rpx;
+}
+.btn {
+    margin: 0 auto;
+    margin-top: 100rpx;
+    width: 520rpx;
+    background-color: #20befe;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 90rpx;
+    color: #fff;
+    box-shadow: 0 3px 5px #BEEAF9;
+}
+.btn-hover {
+    color: rgba(255,255,255,.7);
+    background-color: #0b86eb;
+}
