@@ -68,7 +68,6 @@ function remove(eventName, id) {
 }
 
 wx.event = {
-    eventFunc,
     one,
     listen,
     fire,

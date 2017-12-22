@@ -1,0 +1,7 @@
+<!--pages/repository/repository.wxml-->
+<button type="primary" bindtap='add'>add</button>
+
+<block wx:for="{{list}}" wx:key="id">
+    <button type="warn" bindtap='del' wx:if="{{index % 2 == 1}}" data-id="{{item.id}}">{{item.id}} - {{item.title}}</button>
+    <button bindtap='put' wx:if="{{index % 2 == 0}}" data-id="{{item.id}}">{{item.id}} - {{item.title}}</button>
+</block>

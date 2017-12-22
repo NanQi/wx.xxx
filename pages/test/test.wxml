@@ -1,0 +1,6 @@
+<!--pages/test/test.wxml-->
+<view class='content'>
+    name: {{name}}
+</view>
+<button type="primary" bindtap='ok'>ok</button>
+<button bindtap='cancel'>cancel</button>

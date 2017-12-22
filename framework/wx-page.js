@@ -10,18 +10,6 @@ function setOnLoad(options) {
         if (!!param.eventName) {
             this.eventName = param.eventName;
         }
-
-        if (!!this.loadData) {
-            wx.showNavigationBarLoading()
-            let prom = this.loadData(param)
-            if (prom instanceof Promise) {
-                prom.done(_ => {
-                    wx.hideNavigationBarLoading()
-                })
-            } else {
-                wx.hideNavigationBarLoading()
-            }
-        }
     }
 
     return options
@@ -36,17 +24,21 @@ wx.page = options => {
     Page(options)
 }
 
+
 wx.listPage = options => {
 
     options.last_id = 0
 
     options.initData = function () {
+        this.loadEnd = false
+        this.loadReady = false
         this.last_id = 0
         this.data.list = []
         this.bindData()
     }
 
     options.bindData = function () {
+        console.log('bindData')
         let last_id = this.last_id
 
         wx.showNavigationBarLoading()
@@ -55,7 +47,9 @@ wx.listPage = options => {
         this.loadData && this.loadData({ last_id, limit: DEFAULT_LIMIT })
             .then(res => {
 
-                if(!res){
+                console.log(res)
+
+                if (!res) {
                     return
                 }
 
@@ -95,9 +89,9 @@ wx.listPage = options => {
         })
 
         this.bindData()
-    },
+    }
 
-    Page(options)
+    wx.page(options)
 }
 
 wx.modalPage = options => {

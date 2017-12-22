@@ -1,3 +1,4 @@
+require('promise-ext')
 require('wx-utils')
 require('wx-conf')
 require('wx-lock')
